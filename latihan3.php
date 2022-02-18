@@ -4,11 +4,12 @@ $mahasiswa = [
 	"nim" => "21510023", 
 	"Jurusan" => "Sistem Informasi", 
 	"email" => "virgo@stimata.ac.id",
-	"tugas" => [100, 99, 98]],
+	"gambar" => "profil (1).jpg"],
 	["nama" =>  "Ulumudin", 
 	"nim" =>  "21510024", 
 	"Jurusan" =>  "Teknologi Informasi", 
-	"email" => "ulumudin@stimata.ac.id"]
+	"email" => "ulumudin@stimata.ac.id",
+	"gambar" => "profil (2).jpg"]
 ];
 ?>
 
@@ -21,6 +22,16 @@ $mahasiswa = [
 </head>
 <body>
 	<h1>Data Mahasiswa</h1>
-	<?php echo $mahasiswa[0]["tugas"][1]; ?>
+	<?php foreach ($mahasiswa as $mhs): ?>
+	<ul>
+		<li>
+			<img src="gambar/<?= $mhs["gambar"]; ?> ">
+		</li>
+		<li>Nama	: <?= $mhs["nama"]; ?></li>
+		<li>NIM		: <?= $mhs["nim"]; ?></li>
+		<li>Jurusan	: <?= $mhs["Jurusan"]; ?></li>
+		<li>Email	: <?= $mhs["email"]; ?></li>
+	</ul>
+	<?php endforeach; ?>	
 </body>
 </html>
