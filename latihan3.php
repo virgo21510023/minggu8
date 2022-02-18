@@ -3,7 +3,8 @@ $mahasiswa = [
 	["nama" => "Virgo", 
 	"nim" => "21510023", 
 	"Jurusan" => "Sistem Informasi", 
-	"email" => "virgo@stimata.ac.id"],
+	"email" => "virgo@stimata.ac.id",
+	"tugas" => [100, 99, 98]],
 	["nama" =>  "Ulumudin", 
 	"nim" =>  "21510024", 
 	"Jurusan" =>  "Teknologi Informasi", 
@@ -20,13 +21,6 @@ $mahasiswa = [
 </head>
 <body>
 	<h1>Data Mahasiswa</h1>
-	<?php foreach ($mahasiswa as $mhs): ?>
-	<ul>
-		<li>Nama	: <?= $mhs["nama"]; ?></li>
-		<li>NIM		: <?= $mhs["nim"]; ?></li>
-		<li>Jurusan	: <?= $mhs["Jurusan"]; ?></li>
-		<li>Email	: <?= $mhs["email"]; ?></li>
-	</ul>
-	<?php endforeach; ?>	
+	<?php echo $mahasiswa[0]["tugas"][1]; ?>
 </body>
 </html>
